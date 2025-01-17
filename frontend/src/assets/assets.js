@@ -176,7 +176,7 @@ export const food_list = [
         category: "Rolls"
     }, {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Dark Chocolate Waffles",
         image: food_9,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -255,7 +255,7 @@ export const food_list = [
         category: "Cake"
     }, {
         _id: "20",
-        name: "Sliced Cake",
+        name: "Lotus Cheesecake",
         image: food_20,
         price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
