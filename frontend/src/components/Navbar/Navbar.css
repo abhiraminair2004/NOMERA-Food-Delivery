@@ -30,7 +30,8 @@
     transition: 0.3s;
 }
 .navbar button:hover{
-    background-color: #fff4f2;
+    background-color: rgb(252, 65, 65);
+    color: white;
 }
 .navbar .active{
     padding-bottom: 2px;
