@@ -3,6 +3,13 @@ import cors from "cors"
 import { connectDB } from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Fix __dirname in ES module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 //app config
 const app= express()
@@ -15,6 +22,8 @@ app.use(cors())
 connectDB();
 //api endpoint
 app.use("/api/food",foodRouter)
+app.use("/images", express.static(path.join(__dirname, "uploads")));
+
 
 app.get("/",(req,res)=>{
     res.send("API working")
