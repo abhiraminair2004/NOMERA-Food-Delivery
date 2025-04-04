@@ -7,6 +7,7 @@ import 'dotenv/config'
 import path from "path";
 import { fileURLToPath } from "url";
 import userRouter from "./routes/userRoute.js";
+import cartRouter from "./routes/cartRoute.js"
 
 // Fix __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,7 @@ connectDB();
 app.use("/api/food",foodRouter)
 app.use("/images", express.static(path.join(__dirname, "uploads")));
 app.use("/api/user",userRouter)
+app.use("/api/cart",cartRouter)
 
 app.get("/",(req,res)=>{
     res.send("API working")
